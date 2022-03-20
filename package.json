@@ -1,0 +1,11 @@
+{
+  "name": "@sikalabs/slu",
+  "version": "0.35.0",
+  "bin": {
+    "slu-darwin-arm64": "./bin/slu-darwin-arm64",
+    "slu-darwin-amd64": "./bin/slu-darwin-amd64",
+    "slu-linux-arm64": "./bin/slu-linux-arm64",
+    "slu-linux-amd64": "./bin/slu-linux-amd64",
+    "slu": "./bin/slu"
+  }
+}

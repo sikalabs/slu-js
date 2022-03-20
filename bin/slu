@@ -1,0 +1,21 @@
+#!/bin/sh
+
+ARCH_=$(uname -m)
+OS_=$(uname)
+
+case $ARCH_ in
+amd64*) ARCH="amd64";;
+x86_64*) ARCH="amd64";;
+arm64*) ARCH="arm64";;
+esac
+
+case $OS_ in
+Darwin*) OS="darwin";;
+Linux*) OS="linux";;
+esac
+
+SLU=$(dirname $(which $0))/slu-$OS-$ARCH
+
+[ ! -f $SLU ] && echo $SLU does not exist, OS=$OS_ ARCH=$ARCH_
+
+[ -f $SLU ] && $SLU $@
