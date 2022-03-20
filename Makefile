@@ -8,6 +8,10 @@ endif
 	@make _get-slu OS=linux ARCH=arm64
 	chmod 755 -R ./bin/*
 
+publish:
+	sleep 10
+	yarn publish --access public
+
 _get-slu:
 ifndef VERSION
 	$(error VERSION is undefined)
